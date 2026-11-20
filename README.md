@@ -12,7 +12,8 @@ is not guaranteed. This is a **linear approximation**, not a curvature estimator
 
 ## Install and run
 
-Targets Python 3.10–3.13; locally tested on 3.10.12. Uses scikit-learn 1.7.x and
+Targets Python 3.10–3.13; tested on 3.10.12, 3.11.15, 3.12.13 and 3.13.14.
+Uses scikit-learn 1.7.x and
 imbalanced-learn 0.14.x. Runtime bounds
 are in `pyproject.toml`; experiment versions are in `requirements-reproduce.txt`.
 No GPU, credentials or dataset download is needed.

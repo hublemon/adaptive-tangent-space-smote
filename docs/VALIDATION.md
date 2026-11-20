@@ -1,6 +1,6 @@
 # Validation evidence — 2026-11-20
 
-Local execution: Linux, Python 3.10.12. Numerical dependencies are pinned in
+Local execution: Linux; Python 3.10.12 for experiments. Numerical dependencies are pinned in
 requirements-reproduce.txt; the complete experiment environment is in
 results/environment.json. Tests and commands were actually executed.
 
@@ -19,6 +19,10 @@ results/environment.json. Tests and commands were actually executed.
   420 training and 180 untouched test rows. Added rows: 248 tangent, 80 segment,
   0 duplicate. 1,305 boundary rejections out of 1,633 attempts.
 - The complete Python block in README.md was executed successfully.
+- Additional isolated Python **3.11.15, 3.12.13 and 3.13.14** environments each
+  passed all **54 tests** and quickstart. All four Python versions produced the
+  same displayed quickstart metrics and path/rejection counts with the pinned
+  numerical libraries. This is local compatibility evidence, not a remote CI run.
 - Source distribution and wheel build, `twine check`, archive-content checks
   and installation from the wheel passed. The installed module was verified
   to load from site-packages rather than the development source tree.
