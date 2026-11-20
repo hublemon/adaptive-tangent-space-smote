@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ats-smote"
+version = "0.1.0"
+description = "Adaptive Tangent-Space SMOTE for dense binary classification"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "hublemon"}]
+dependencies = [
+  "numpy>=1.25.2,<3",
+  "scipy>=1.11.4,<2",
+  "scikit-learn>=1.7,<1.8",
+  "imbalanced-learn>=0.14,<0.15",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "pytest-cov>=6,<8", "ruff>=0.14,<0.15", "build>=1.3,<2", "twine>=6,<7"]
+experiments = ["matplotlib>=3.10,<3.11"]
+
+[project.urls]
+Repository = "https://github.com/hublemon/adaptive-tangent-space-smote"
+Issues = "https://github.com/hublemon/adaptive-tangent-space-smote/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

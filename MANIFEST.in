@@ -1,0 +1,7 @@
+include LICENSE README.md CHANGELOG.md CITATION.cff requirements-reproduce.txt
+recursive-include docs *.md *.yml
+recursive-include examples *.py
+recursive-include experiments *.py *.md
+recursive-include tests *.py
+recursive-include results *.csv *.json *.md *.png
+prune results/smoke

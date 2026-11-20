@@ -1,0 +1,82 @@
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "folds": 3,
+  "dataset_seed": 2026,
+  "python": "3.10.12",
+  "versions": {
+    "ats-smote": "0.1.0",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "imbalanced-learn": "0.14.0",
+    "matplotlib": "3.10.7",
+    "imbalanced-learn-extra": "0.2.10",
+    "pyloras": "0.1.0b6"
+  },
+  "datasets": [
+    {
+      "name": "moons",
+      "rows": 540,
+      "features": 2,
+      "minority": 90,
+      "majority": 450
+    },
+    {
+      "name": "annulus",
+      "rows": 540,
+      "features": 2,
+      "minority": 90,
+      "majority": 450
+    },
+    {
+      "name": "annulus_sparse",
+      "rows": 462,
+      "features": 2,
+      "minority": 12,
+      "majority": 450
+    },
+    {
+      "name": "flat",
+      "rows": 540,
+      "features": 2,
+      "minority": 90,
+      "majority": 450
+    },
+    {
+      "name": "breast_cancer",
+      "rows": 569,
+      "features": 30,
+      "minority": 212,
+      "majority": 357
+    }
+  ],
+  "elapsed_seconds": 195.4656843319999,
+  "parameters": {
+    "none": "None",
+    "class_weight": "None",
+    "random_over": "RandomOverSampler(random_state=0)",
+    "smote": "SMOTE(random_state=0)",
+    "borderline_smote": "BorderlineSMOTE(random_state=0)",
+    "adasyn": "ADASYN(random_state=0)",
+    "ats": "AdaptiveTangentSpaceSMOTE(random_state=0)",
+    "ats_fixed_dim": "AdaptiveTangentSpaceSMOTE(adapt_dimension=False, random_state=0)",
+    "ats_no_boundary": "AdaptiveTangentSpaceSMOTE(check_boundary=False, random_state=0)",
+    "ats_no_fallback": "AdaptiveTangentSpaceSMOTE(allow_fallback=False, random_state=0)",
+    "geometric_smote": "GeometricSMOTE(random_state=0)",
+    "loras": "LORAS(random_state=0)"
+  },
+  "classifiers": {
+    "logistic": "LogisticRegression(C=1, max_iter=1000, random_state=0)",
+    "random_forest": "RandomForestClassifier(min_samples_leaf=2, n_jobs=1, random_state=0)"
+  },
+  "threads": 1,
+  "tuning": "none",
+  "evaluation": "repeated stratified cross-validation",
+  "caveat": "Folds and seeds overlap; no independent-sample significance claim."
+}

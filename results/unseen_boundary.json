@@ -1,0 +1,24 @@
+{
+  "purpose": "Adversarial observations missing the true inner majority support.",
+  "seed": 0,
+  "metrics": {
+    "support_distance": 0.37908589314120583,
+    "intrusion_rate": 0.9886363636363636
+  },
+  "diagnostics": {
+    "requested": 88,
+    "generated": 88,
+    "tangent": 88,
+    "segment": 0,
+    "duplicate": 0,
+    "attempts": 88,
+    "boundary_rejections": 0,
+    "radius_rejections": 0,
+    "dimension_counts": {
+      "2": 12
+    },
+    "geometry_reasons": {
+      "selected": 12
+    }
+  }
+}
